@@ -1,0 +1,68 @@
+{%extends 'admin/dash_admin.html'%}
+
+{%block content%}
+   /<div class="m-t-50">
+<h1 align="center"> INPUT DATA MAHASISWA </h1>
+
+<div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <form class="form-horizontal" method="POST" action="">
+                {{form.hidden_tag()}}
+                <div class="form-group">
+                    {{form.nim.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.nim(class="form-control")}}
+                    </div>
+                </div>
+                <div class="form-group">
+                        {{form.nama.label(class="control-label col-sm-4")}}
+                        <div class="col-sm-8">
+                            {{form.nama(class="form-control")}}
+                        </div>
+                </div>
+                <div class="form-group">
+                        {{form.jenis_kelamin.label(class="control-label col-sm-4")}}
+                        <div class="col-sm-8">
+                            {{form.jenis_kelamin(class="form-control")}}
+                        </div>
+                </div>
+                <div class="form-group">
+                        {{form.tmpt_lahir.label(class="control-label col-sm-4")}}
+                        <div class="col-sm-8">
+                            {{form.tmpt_lahir(class="form-control")}}
+                        </div>
+                </div>
+                <div class="form-group">
+                        {{form.tgl_lahir.label(class="control-label col-sm-4")}}
+                        <div class="col-sm-8">
+                            {{form.tgl_lahir(class="form-control")}}
+                        </div>
+                </div>
+                <div class="form-group">
+                        {{form.alamat.label(class="control-label col-sm-4")}}
+                        <div class="col-sm-8">
+                            {{form.alamat(class="form-control")}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            {{form.prodi.label(class="control-label col-sm-4")}}
+                            <div class="col-sm-8">
+                                {{form.prodi(class="form-control")}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                {{form.password.label(class="control-label col-sm-4")}}
+                                <div class="col-sm-8">
+                                    {{form.password(class="form-control")}}
+                                </div>
+                </div>
+                <div class="form-group">
+                    {{form.submit(class="col-sm-offset-4 btn btn-success")}}
+                </div>
+            </form>
+        </div>
+    </div>
+  
+            
+
+{%endblock%}

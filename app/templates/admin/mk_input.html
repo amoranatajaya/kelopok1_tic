@@ -1,0 +1,43 @@
+{%extends 'admin/dash_admin.html'%}
+
+{%block content%}
+<div class="m-t-100">
+    <h1 align="center"> INPUT DATA MATAKULIAH </h1></div>
+    <div class="row">
+        <div class="col-sm-8" style="margin:auto">
+            <form class="form-horizontal" method="POST" action="">
+                {{form.hidden_tag()}}
+                <div class="form-group">
+                {{form.kd_mk.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                    {{form.kd_mk(class="form-control")}}
+                    </div>
+                </div>
+                <div class="form-group">
+                        {{form.nama_mk.label(class="control-label col-sm-4")}}
+                        <div class="col-sm-8">
+                            {{form.nama_mk(class="form-control")}}
+                        </div>
+                </div>
+                <div class="form-group">
+                        {{form.sks.label(class="control-label col-sm-4")}}
+                        <div class="col-sm-8">
+                            {{form.sks(class="form-control")}}
+                        </div>
+                </div>
+                <div class="form-group">
+                        {{form.semester.label(class="control-label col-sm-4")}}
+                        <div class="col-sm-8">
+                            {{form.semester(class="form-control")}}
+                        </div>
+                </div>
+                <div class="form-group">
+                    {{form.submit(class="col-sm-offset-4 btn btn-success")}}
+                </div>    
+            </form>
+        </div>
+    </div>
+  
+            
+
+{%endblock%}

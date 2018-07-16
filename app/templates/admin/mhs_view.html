@@ -1,0 +1,61 @@
+{%extends 'admin/dash_admin.html'%}
+
+{%block content%}
+   
+<div class=" m-t-180">
+<div>
+<h1 align="center"> DATA MATAKULIAH </h1>
+<div class="section__content section__content--p30">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-60">
+                <!-- USER DATA-->
+                <div class="user-data m-b-40">
+                    <h3 class="title-3 m-b-30">
+                        <i class="zmdi zmdi-account-calendar"></i>Data User</h3>
+                    <div class="filters m-b-45"></div>
+                    
+                    <div class="table-responsive table-data">
+                        <table class="table">
+                            <thead>
+                                
+                                    <th>NIM</th>
+                                    <th>Nama</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Tempat Lahir </th>
+                                    <th>Tanggal Lahir</th>
+                                    <th>Alamat</th>
+                                    <th>Prodi</th>
+                                   
+                            </thead>
+
+                            <tbody>
+                                    {%for mhs in mhs_view%}
+                                <tr>
+                                    <td>{{mhs.nim}} </td>
+                                    <td>{{mhs.nama}} </td>
+                                    <td>{{mhs.jenis_kelamin}} </td>
+                                    <td>{{mhs.tmpt_lahir}} </td>
+                                    <td>{{mhs.tgl_lahir}} </td>
+                                    <td>{{mhs.alamat}} </td>
+                                    <td>{{mhs.prodi}} </td>
+                                    <td><a class="js-arrow" href="{{url_for("delete",id=mhs.id)}}"><button class="au-btn au-btn-icon au-btn--blue au-btn--small">
+                                            <i class="zmdi zmdi-plus"></i>Hapus</button></a></td>
+                                </tr>
+                                    {%endfor%}
+                            </tbody>
+                        </table>
+
+                    </div>
+                    
+                </div>
+                </div>
+                </div>
+                </div>
+            
+                <a class="js-arrow" href="mhs_input"><button class="au-btn au-btn-icon au-btn--green au-btn--small ">
+                    <i class="zmdi zmdi-plus"></i>Tambah Data</button></a>
+                <!-- END USER DATA-->
+            
+
+{%endblock%}
